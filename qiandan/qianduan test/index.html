@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+    h1{
+        font-size:20px;
+        color:rgb(30, 179, 50);
+    }
+    h2{
+        font-size:14px;
+    }
+    div{
+        width:120px;
+        height:100px;
+        background-color:pink;
+    }
+
+
+    </style>
+</head>
+<body>
+    <h1>疯人院民间网站</h1>
+    <label>欢迎来到疯人院</label>
+    <h2>飞越疯人院回归大自然</h2>
+    <p>我院部分图片</p>
+    <img src="https://img.zcool.cn/community/0145e65d333c4ea8012187f4ffc058.jpg@1280w_1l_2o_100sh.jpg" alt="网络好像不在线哦~" title="这是提示文本"/>
+    <div></div>
+
+    <br/>
+    <a href="https://www.baidu.com" titile="你有本事点我啊" target="_blank">我院官网</a>
+    <br/>
+    <ul>
+        <li>一我在顶楼</li>
+        <li>2望着窗户</li>
+        <li>叁想着桥上</li>
+        <li>④睡在床下</li>
+        <li>雾活进梦里</li>
+    </ul>
+    <hr/>
+    <style>input{tab-size:300px}</style>
+    <input type="text" placeholder="寻找最近的院址" /> 
+    <input type="submit" value="立即搜索"/>
+    <br/>
+<table border="1" style="width:400px;height:40px" cellpadding="20" cellspacing="0">
+    <thead><h>入院申请表</h></thead>
+    <tbody>
+    <tr>
+        <td>患者姓名：</td>   <td><form method="post" action="save.php">
+        <input type="text" placeholder="请使用真实姓名"></form>
+        </td>
+    </tr>
+    <tr>
+        <td>入院原因：</td>    <td><form method="post" action="save.php">
+            <input type="text" placeholder="如需详谈请点击官网"></form>
+        </td>
+    </tr>
+    <tr>
+        <th colspan="2">
+            <form method="post" action="save.php">
+                <input type="submit" value="提交" />
+                <input type="reset" value="重置" />
+            </form>
+        </th>
+    </tr>
+</tbody>
+</table>
+
+<p>院长简历</p>
+<label>性别：</label>
+<label>男</label>
+<input  type="radio" value="1" name="gender" checked=checked/>
+<label>女</label>
+<input type="radio" value="2" name="gender"/>
+<br/>
+<label>城市：</label>
+<select>
+<option value="重庆">重庆</option>
+<option value="四川">四川</option>
+<option value="其他">其他</option>
+</select>
+<br/>
+<label>个人爱好：</label>
+<input type="checkbox" value="1" name="checkbox1" checked=checked>打游戏
+<input type="checkbox" value="2" name="checkbox2" checked=checked>看电影
+<input type="checkbox" value="3" name="checkbox3" checked=checked>听音乐
+<input type="checkbox" value="4" name="checkbox4">做运动
+<br/>
+<label>建院原因：</label>
+<input type="text" placeholder="本院致力于疯人的狂欢" style="width:140px;height:80px;"/>
+</body>
+</html>
