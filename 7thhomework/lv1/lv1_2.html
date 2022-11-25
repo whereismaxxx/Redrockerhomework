@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+       .ball1{
+            position:absolute;
+            left:0;
+            height: 150px;
+            width:150px;
+            border-radius:50%;
+            background-color: rgb(27, 196, 252);
+            
+            
+        }
+        .ball2{
+            position:absolute;
+            left:0;
+            height: 150px;
+            width:150px;;
+            border-radius:50%;
+            background-color: rgb(23, 202, 133);
+            position:absolute;
+            left:0;
+            top:150px;
+            
+        }
+        .ball3{
+            position:absolute;
+            left:0;
+            height: 150px;
+            width:150px;
+            border-radius:50%;
+            background-color: rgb(255, 197, 72);
+            position:absolute;
+            left:0;
+            top:300px;
+            
+        }
+        
+    
+</style>
+<body>
+    <div class="ball1"></div>
+
+    <div class="ball2"></div>
+
+    <div class="ball3"></div>
+    
+    <script>
+        function animate(obj,target){
+          let timer=setInterval(function(){
+            if(obj.offsetLeft>=300){
+                clearInterval(timer);
+            }
+            obj. style. left =obj.offsetLeft+5+'px';
+          },30);
+        }
+
+        let ball1=document.querySelector('.ball1');
+        let ball2=document.querySelector('.ball2');
+        let ball3=document.querySelector('.ball3');
+
+        new Promise(function (resolve, reject) {
+    setTimeout(function () {
+        animate(ball1,300);
+        resolve();
+    }, 1000);
+}).then(function () {
+    return new Promise(function (resolve, reject) {
+        setTimeout(function () {
+            animate(ball2,300);
+            resolve();
+        }, 2000);
+    });
+}).then(function () {
+    setTimeout(function () {
+        animate(ball3,300);
+    }, 2000);
+});
+     
+    </script>
+
+    
+</body>
+</html>

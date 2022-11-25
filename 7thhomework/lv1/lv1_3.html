@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .ball1{
+            position:absolute;
+            left:0;
+            height: 150px;
+            width:150px;
+            border-radius:50%;
+            background-color: rgb(225, 68, 68);
+                 
+        }
+        .ball2{
+            position:absolute;
+            left:0;
+            height: 150px;
+            width:150px;;
+            border-radius:50%;
+            background-color: rgba(222, 22, 22, 0.9);
+            position:absolute;
+            left:0;
+            top:150px;
+            
+        }
+        .ball3{
+            position:absolute;
+            left:0;
+            height: 150px;
+            width:150px;
+            border-radius:50%;
+            background-color: rgba(147, 17, 17, 0.593);
+            position:absolute;
+            left:0;
+            top:300px;
+            
+        }
+    </style>      
+</head>
+<body>
+
+    <div class="ball1"></div>
+    
+    <div class="ball2"></div>
+    
+    <div class="ball3"></div>
+
+    <script>
+        function animate(obj,target){
+          let timer=setInterval(function(){
+            if(obj.offsetLeft>=300){
+                clearInterval(timer);
+            }
+            obj. style. left =obj.offsetLeft+5+'px';
+          },30);
+        }
+
+        let ball1=document.querySelector('.ball1');
+        let ball2=document.querySelector('.ball2');
+        let ball3=document.querySelector('.ball3');
+    var obj;
+        let step = (time) => {
+     return new Promise((resolve) => {
+        animate(obj,300);  
+    setTimeout(() => {
+      resolve(animate(obj,300));
+    }, 1800);
+  });
+};
+async function f() {
+    obj=ball1;
+    await step(500);
+    obj=ball2;
+    await step(500);
+     obj=ball3;
+    await step(500);
+}
+f().then((res) => {})
+    </script>
+    
+</body>
+</html>

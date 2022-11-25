@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .head{
+           font-size:24px;
+           font-weight:bold;
+        }
+        .p{
+            font-size:12px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <head>《记承天寺夜游》</head>
+        <p id="showStr"></p>
+    </div>
+
+
+<script>
+let i = 0;
+let str =  '元丰六年十月十二日夜，解衣欲睡，月色入户，欣然\r\n起行。念无与为乐者，遂至承天寺寻张怀民。怀民亦未\r\n寝，相与步于中庭。庭下如积水空明，水中藻、荇交横，\r\n盖竹柏影也。何夜无月？何处无竹柏？但少闲人如吾两人\r\n者耳。'
+let type = document.getElementById("showStr");
+   
+
+const show = (time) => {
+    return new Promise((resolve) => setTimeout(resolve, time))
+}
+
+const doit = async () => {
+    for (let i = 0; i < str.length; i++) {
+        await show(300)
+        type.innerText =str.substring(0,i);
+    }
+}
+
+doit()
+
+
+
+
+</script>
+    
+</body>
+</html>
