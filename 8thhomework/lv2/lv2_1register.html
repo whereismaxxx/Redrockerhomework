@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<script>
+    const xhr=new XMLHttpRequest();
+        xhr.open("post","https://taskapi.chovrio.club/users/register",true);
+        xhr.setRequestHeader('Content-Type','application/json')
+        xhr.send(JSON.stringify({
+            username:"wyh",   
+            password:"sring"
+        }));
+
+        xhr.onreadystatechange = () => {
+     if (xhr.readyState == 4) {
+     if (xhr.status == 200) {
+      var data = xhr.responseTEXT;
+      return data;
+      }
+      }
+}
+console.log(xhr);
+
+
+
+</script>
+</body>
+</html>
